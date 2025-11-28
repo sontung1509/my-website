@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeLearn - Học Lập Trình Cơ Bản Trực Tuyến</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar">
+    <div class="container navbar-content">
+      <!-- Logo -->
+       <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <span class="logo-text">CodeLearn</span>
+            </a>
+      
+      <!-- Desktop Menu -->
+      <div class="nav-menu">
+        <a href="index.html" class="nav-link active">
+          
+          Home
+        </a>
+        <a href="lessons.html" class="nav-link">
+          
+          Lessons
+        </a>
+        <a href="community.html" class="nav-link">
+          
+          Community
+        </a>
+        <button class="btn-account">
+         
+          Account
+        </button>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" class="active">Home</a>
+      <a href="lessons.html">Lessons</a>
+      <a href="community.html">Community</a>
+      <a href="#">Account</a>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero">
+    <div class="hero-bg-code">
+      <span>&lt;html&gt;</span>
+      <span>function()</span>
+      <span>{ }</span>
+      <span>&lt;/&gt;</span>
+    </div>
+    
+    <div class="container hero-content">
+      <!-- Hero Text -->
+      <div class="hero-text">
+        <div class="hero-badge">
+          <i data-lucide="zap" style="width:16px;height:16px"></i>
+          Học lập trình miễn phí
+        </div>
+        
+        <h1>
+          Bắt đầu hành trình<br>
+          <span class="gradient-text">Lập trình</span> của bạn
+        </h1>
+        
+        <p class="hero-description">
+          Học HTML, CSS, JavaScript từ con số 0. Phương pháp học trực quan, 
+          thực hành ngay trên trình duyệt.
+        </p>
+        
+        <div class="hero-buttons">
+          <a href="lessons.html" class="btn-primary">
+            Bắt đầu học
+            <i data-lucide="chevron-right"></i>
+          </a>
+          <button class="btn-outline">
+            <i data-lucide="play"></i>
+            Xem demo
+          </button>
+        </div>
+      </div>
+      
+      <!-- Hero Code Preview -->
+      <div class="hero-code-preview">
+        <div class="code-header">
+          <div class="code-dot red"></div>
+          <div class="code-dot yellow"></div>
+          <div class="code-dot green"></div>
+        </div>
+        <pre>
+<span class="keyword">const</span> <span class="variable">greeting</span> = () => {
+  <span class="keyword">return</span> <span class="string">"Hello, World!"</span>;
+};
+
+<span class="comment">// Bạn sẽ viết được như này!</span></pre>
+      </div>
+    </div>
+    
+    <div class="hero-wave"></div>
+  </section>
+
+  <!-- ==================== FEATURES SECTION ==================== -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Tại sao chọn CodeLearn?</h2>
+        <p>Phương pháp học hiện đại, trực quan và hiệu quả cho người mới bắt đầu</p>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon blue">
+            <i data-lucide="code-2"></i>
+          </div>
+          <h3>Thực hành ngay</h3>
+          <p>Code editor tích hợp, chạy code trực tiếp trên trình duyệt không cần cài đặt.</p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon green">
+            <i data-lucide="target"></i>
+          </div>
+          <h3>Lộ trình rõ ràng</h3>
+          <p>Từ cơ bản đến nâng cao, từng bước một dễ hiểu với video bài giảng chi tiết.</p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon purple">
+            <i data-lucide="users"></i>
+          </div>
+          <h3>Cộng đồng hỗ trợ</h3>
+          <p>Hỏi đáp, chia sẻ dự án và học hỏi từ cộng đồng hàng nghìn người học.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COURSE SECTION ==================== -->
+  <section class="course-section">
+    <div class="container">
+      <div class="course-grid">
+        <!-- Course Info -->
+        <div class="course-info">
+          <span class="subtitle">Khóa học nổi bật</span>
+          <h2>Web Development cơ bản</h2>
+          <p>Làm chủ HTML, CSS và JavaScript trong 30 ngày. Xây dựng website đầu tiên của bạn từ con số 0.</p>
+          
+          <ul class="course-features">
+            <li>
+              <i data-lucide="check-circle" style="width:20px;height:20px;color:#22c55e"></i>
+              12 chương học chi tiết
+            </li>
+            <li>
+              <i data-lucide="check-circle" style="width:20px;height:20px;color:#22c55e"></i>
+              50+ bài tập thực hành
+            </li>
+            <li>
+              <i data-lucide="check-circle" style="width:20px;height:20px;color:#22c55e"></i>
+              5 dự án thực tế
+            </li>
+            <li>
+              <i data-lucide="check-circle" style="width:20px;height:20px;color:#22c55e"></i>
+              Chứng chỉ hoàn thành
+            </li>
+          </ul>
+          
+          <a href="lessons.html" class="btn-enroll">
+            Đăng ký ngay - Miễn phí
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+        
+        <!-- Progress Card -->
+        <div class="progress-card">
+          <h3>Tiến độ học tập của bạn</h3>
+          
+          <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 35%"></div>
+          </div>
+          <p class="progress-text">35% hoàn thành • 7/20 bài học</p>
+          
+          <div class="lesson-list">
+            <!-- Lesson 1 - Completed -->
+            <div class="lesson-item">
+              <div class="lesson-number completed">✓</div>
+              <div class="lesson-info">
+                <p class="lesson-title completed">Giới thiệu HTML</p>
+                <span class="lesson-duration">15 phút</span>
+              </div>
+            </div>
+            
+            <!-- Lesson 2 - Completed -->
+            <div class="lesson-item">
+              <div class="lesson-number completed">✓</div>
+              <div class="lesson-info">
+                <p class="lesson-title completed">Thẻ HTML phổ biến</p>
+                <span class="lesson-duration">20 phút</span>
+              </div>
+            </div>
+            
+            <!-- Lesson 3 - Pending -->
+            <div class="lesson-item">
+              <div class="lesson-number pending">3</div>
+              <div class="lesson-info">
+                <p class="lesson-title">CSS Selectors</p>
+                <span class="lesson-duration">25 phút</span>
+              </div>
+            </div>
+            
+            <!-- Lesson 4 - Pending -->
+            <div class="lesson-item">
+              <div class="lesson-number pending">4</div>
+              <div class="lesson-info">
+                <p class="lesson-title">Box Model</p>
+                <span class="lesson-duration">30 phút</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon">
+              <i data-lucide="code-2"></i>
+            </div>
+            <span class="logo-text">CodeLearn</span>
+          </div>
+          <p>Nền tảng học lập trình cơ bản trực tuyến hàng đầu Việt Nam. Học miễn phí, thực hành ngay.</p>
+        </div>
+        
+        <!-- Courses -->
+        <div class="footer-section">
+          <h4>Khóa học</h4>
+          <ul>
+            <li><a href="#">HTML & CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">React</a></li>
+            <li><a href="#">Python</a></li>
+          </ul>
+        </div>
+        
+        <!-- Links -->
+        <div class="footer-section">
+          <h4>Liên kết</h4>
+          <ul>
+            <li><a href="#">Về chúng tôi</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Hỗ trợ</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter -->
+        <div class="footer-section">
+          <h4>Đăng ký nhận tin</h4>
+          <p style="font-size:0.875rem;margin-bottom:1rem">Nhận thông báo khóa học mới và tips lập trình hữu ích.</p>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" placeholder="Email của bạn">
+            <button type="submit">
+              <i data-lucide="arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 CodeLearn. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html> 

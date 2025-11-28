@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài học - CodeLearn</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container navbar-content">
+      <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <span class="logo-text">CodeLearn</span>
+            </a>
+      <div class="nav-menu">
+        <a href="index.html" class="nav-link">
+          
+          Home
+        </a>
+        <a href="lessons.html" class="nav-link active">
+          
+          Lessons
+        </a>
+        <a href="community.html" class="nav-link">
+          
+          Community
+        </a>
+        <button class="btn-account">
+          
+          Account
+        </button>
+      </div>
+      
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+    
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="lessons.html" class="active">Lessons</a>
+      <a href="community.html">Community</a>
+      <a href="#">Account</a>
+    </div>
+  </nav>
+  <div class="top-in-video">
+    <H2>Video minh hoạ</H2>
+  </div>
+
+
+      <!-- Video Section -->
+       
+       <video src="mnt/Joji - Ew.mp4" controls class="video-section" class="video-placeholder"></video>
+      
+
+
+
+      <!-- Theory Tab -->
+      <div class="tab-content active" id="theoryTab">
+        <div class="theory-card">
+          <h2><span class="emoji">📚</span> HTML Forms là gì?</h2>
+          
+          <div class="theory-content">
+            <p>
+              <strong>HTML Form</strong> là một phần quan trọng của web, cho phép người dùng nhập và gửi dữ liệu đến server. Forms được sử dụng trong đăng ký tài khoản, đăng nhập, tìm kiếm, thanh toán, và nhiều tính năng khác.
+            </p>
+            
+            <div class="info-box tip">
+              <i data-lucide="lightbulb" class="info-box-icon"></i>
+              <div class="info-box-content">
+                <h4>💡 Mẹo quan trọng</h4>
+                <p>Mỗi form cần có thuộc tính <code>action</code> (URL xử lý) và <code>method</code> (GET hoặc POST) để hoạt động đúng.</p>
+              </div>
+            </div>
+            
+            <p>
+              Cấu trúc cơ bản của một form HTML bao gồm thẻ <code>&lt;form&gt;</code> bao quanh các phần tử input như text, email, password, checkbox, radio, và button.
+            </p>
+          </div>
+        </div>
+        
+        <div class="theory-card">
+          <h2><span class="emoji">🏷️</span> Các loại Input phổ biến</h2>
+          
+          <div class="theory-content">
+            <p>HTML5 cung cấp nhiều loại input khác nhau để thu thập các kiểu dữ liệu:</p>
+            
+            <div class="code-block">
+              <div class="code-block-header">
+                <span class="code-block-title">
+                  <i data-lucide="file-code"></i>
+                  form-example.html
+                </span>
+                <button class="copy-btn" onclick="copyCode(this)">
+                  <i data-lucide="copy"></i>
+                  Copy
+                </button>
+              </div>
+              <pre><span class="comment">&lt;!-- Form đăng ký cơ bản --&gt;</span>
+<span class="tag">&lt;form</span> <span class="attr">action</span>=<span class="string">"/register"</span> <span class="attr">method</span>=<span class="string">"POST"</span><span class="tag">&gt;</span>
+  <span class="comment">&lt;!-- Text input --&gt;</span>
+  <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="string">"name"</span><span class="tag">&gt;</span>Họ tên:<span class="tag">&lt;/label&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"name"</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">required</span><span class="tag">&gt;</span>
+  
+  <span class="comment">&lt;!-- Email input --&gt;</span>
+  <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="string">"email"</span><span class="tag">&gt;</span>Email:<span class="tag">&lt;/label&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">id</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"email"</span> <span class="attr">required</span><span class="tag">&gt;</span>
+  
+  <span class="comment">&lt;!-- Password input --&gt;</span>
+  <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="string">"password"</span><span class="tag">&gt;</span>Mật khẩu:<span class="tag">&lt;/label&gt;</span>
+  <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">id</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span><span class="tag">&gt;</span>
+  
+  <span class="comment">&lt;!-- Submit button --&gt;</span>
+  <span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="string">"submit"</span><span class="tag">&gt;</span>Đăng ký<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/form&gt;</span></pre>
+            </div>
+            
+            <div class="info-box warning">
+              <i data-lucide="alert-triangle" class="info-box-icon"></i>
+              <div class="info-box-content">
+                <h4>⚠️ Lưu ý bảo mật</h4>
+                <p>Luôn sử dụng <code>type="password"</code> cho mật khẩu và method POST khi gửi dữ liệu nhạy cảm!</p>
+              </div>
+            </div>
+            
+            <div class="info-box success">
+              <i data-lucide="check-circle" class="info-box-icon"></i>
+              <div class="info-box-content">
+                <h4>✅ Best Practice</h4>
+                <p>Luôn sử dụng <code>&lt;label&gt;</code> với thuộc tính <code>for</code> để tăng khả năng truy cập (accessibility).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Practice Tab -->
+
+          
+          <div class="editor-body">
+            <div class="code-input-wrapper">
+              <div class="line-numbers" id="lineNumbers"></div>
+              <textarea class="code-textarea" id="codeInput" spellcheck="false" oninput="updateLineNumbers()"><!DOCTYPE html>
+<html>
+<head>
+  <style>
+   
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>🚀 Đăng ký tài khoản</h2>
+    
+    <form>
+      <div class="form-group">
+        <label for="fullname">Họ và tên</label>
+        <input type="text" id="fullname" name="fullname" 
+               placeholder="Nhập họ tên của bạn" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" 
+               placeholder="example@email.com" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Mật khẩu</label>
+        <input type="password" id="password" name="password" 
+               placeholder="Tối thiểu 8 ký tự" required>
+      </div>
+      
+      <button type="submit">Đăng ký ngay</button>
+    </form>
+  </div>
+</body>
+</html></textarea>
+            </div>
+            
+            <div class="output-wrapper">
+              <div class="output-header">
+                <i data-lucide="monitor"></i>
+                Kết quả
+                <span class="output-status success" id="outputStatus">
+                  <i data-lucide="check-circle" style="width:12px;height:12px"></i>
+                  Ready
+                </span>
+              </div>
+              <iframe class="output-iframe" id="outputFrame" title="Output"></iframe>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hints Section -->
+        <div class="hints-section">
+          <div class="hint-card yellow" id="hintCard">
+            <button class="hint-toggle" onclick="toggleHint('hintCard')">
+              <i data-lucide="lightbulb"></i>
+              Gợi ý
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="hint-content">
+              <p>Thử thêm các input types khác như <code>tel</code>, <code>date</code>, <code>number</code> hoặc <code>checkbox</code> để mở rộng form của bạn!</p>
+            </div>
+          </div>
+          
+          <div class="hint-card green" id="solutionCard">
+            <button class="hint-toggle" onclick="toggleHint('solutionCard')">
+              <i data-lucide="check-circle"></i>
+              Xem thêm ví dụ
+              <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="hint-content">
+              <p>Bạn có thể thêm validation với các thuộc tính như <code>required</code>, <code>minlength</code>, <code>pattern</code> để kiểm tra dữ liệu người dùng nhập.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon">
+              <i data-lucide="code-2"></i>
+            </div>
+            <span class="logo-text">CodeLearn</span>
+          </div>
+          <p>Nền tảng học lập trình cơ bản trực tuyến hàng đầu Việt Nam.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Khóa học</h4>
+          <ul>
+            <li><a href="#">HTML & CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">React</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Liên kết</h4>
+          <ul>
+            <li><a href="#">Về chúng tôi</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Hỗ trợ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Đăng ký nhận tin</h4>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" placeholder="Email của bạn">
+            <button type="submit">
+              <i data-lucide="arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 CodeLearn. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
